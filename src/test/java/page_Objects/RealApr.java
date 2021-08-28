@@ -66,7 +66,7 @@ public class RealApr extends NavigationBar {
     public RealApr validateRealAprRate(String expectedValue) {
         String aprRate = ActOn.element(driver, ActualAprValue).getTextValue();
         LOGGER.debug("Validting Real APR rate is " + expectedValue);
-        Assert.assertEquals(aprRate, expectedValue);
+        Assert.assertEquals(aprRate, expectedValue, "Actual value is not match with Expected value");
         return this;
 
     }
